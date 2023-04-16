@@ -432,8 +432,8 @@ const config = {
         ],
       },
       algolia: {
-        apiKey: "5d5a02bdf02df700355c8ccd84b78d13",
-        appId: "8W3YJXJGF2",
+        apiKey: "5e8a802658272c29d7a7a75fe754fc61",
+        appId: "3J083Q2HGW",
         indexName: "wiki",
       },
       umami: {
