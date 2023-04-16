@@ -332,7 +332,7 @@ const config = {
         },
       ],
       navbar: {
-        title: "📚 7Wate's Wiki",
+        title: "📚 Bin's Wiki",
         hideOnScroll: true,
         // logo: {
         //   alt: 'Site Logo',
@@ -350,7 +350,7 @@ const config = {
             label: "👨🏻‍🎓 维基",
             items: [
               {
-                label: "基础入门",
+                label: "读书",
                 to: "/getting-started",
               },
               {
