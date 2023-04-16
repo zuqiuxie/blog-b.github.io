@@ -347,7 +347,7 @@ const config = {
           { to: "/blog", label: "👨🏻‍🌾 博客", position: "right" },
           {
             position: "right",
-            label: "👨🏻‍🎓 维基",
+            label: "👨🏻‍🎓 精进",
             items: [
               {
                 label: "读书",
