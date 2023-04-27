@@ -311,6 +311,20 @@ const config = {
         breadcrumbs: false,
       },
     ],
+// -----------------------------------------------------------------------------------
+    [
+      "@docusaurus/plugin-content-docs",
+      {
+        id: "link",
+        path: "link",
+        routeBasePath: "link",
+        sidebarPath: require.resolve("./sidebars.js"),
+        editUrl: "https://git.7wate.com/zhouzhongping/wiki/src/branch/master",
+        showLastUpdateAuthor: true,
+        showLastUpdateTime: true,
+        breadcrumbs: false,
+      },
+    ],
 
     "docusaurus-plugin-umami",
   ],
