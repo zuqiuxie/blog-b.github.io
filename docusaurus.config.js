@@ -323,8 +323,8 @@ const config = {
       showLastUpdateTime: true,
       breadcrumbs: false,
     },
-    blog: {
-      blogTitle: "Bin`s Blog",
+    link: {
+      Title: "Bin`s Blog",
       blogDescription: "Bin 的个人生活和工作记录",
       blogSidebarCount: 200,
       blogSidebarTitle: "近期文章",
