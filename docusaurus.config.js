@@ -429,6 +429,7 @@ const config = {
           },
           { to: "/life", label: "🚴🏻‍♀️ 生活", position: "right" },
           { to: "/journal", label: "📽️ 日志", position: "right" },
+          { to: "/link", label: "📽️ 导航", position: "right" },
         ],
       },
       algolia: {
