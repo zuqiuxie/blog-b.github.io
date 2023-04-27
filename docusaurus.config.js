@@ -42,7 +42,7 @@ const config = {
         blog: {
           blogTitle: "Bin`s Blog",
           blogDescription: "Bin 的个人生活和工作记录",
-          blogSidebarCount: 20,
+          blogSidebarCount: 200,
           blogSidebarTitle: "近期文章",
           showReadingTime: true,
           editUrl: "https://git.7wate.com/zhouzhongping/wiki/src/branch/master",
@@ -312,19 +312,49 @@ const config = {
       },
     ],
 // -----------------------------------------------------------------------------------
-    [
-      "@docusaurus/plugin-content-docs",
-      {
-        id: "link",
-        path: "link",
-        routeBasePath: "link",
-        sidebarPath: require.resolve("./sidebars.js"),
-        editUrl: "https://git.7wate.com/zhouzhongping/wiki/src/branch/master",
-        showLastUpdateAuthor: true,
-        showLastUpdateTime: true,
-        breadcrumbs: false,
+[
+  "classic",
+  /** @type {import('@docusaurus/preset-classic').Options} */
+  ({
+    docs: {
+      sidebarPath: require.resolve("./sidebars.js"),
+      editUrl: "https://git.7wate.com/zhouzhongping/wiki/src/branch/master",
+      showLastUpdateAuthor: true,
+      showLastUpdateTime: true,
+      breadcrumbs: false,
+    },
+    blog: {
+      blogTitle: "Bin`s Blog",
+      blogDescription: "Bin 的个人生活和工作记录",
+      blogSidebarCount: 200,
+      blogSidebarTitle: "近期文章",
+      showReadingTime: true,
+      editUrl: "https://git.7wate.com/zhouzhongping/wiki/src/branch/master",
+      feedOptions: {
+        title: "Bin`s Blog",
+        description: "Bin 的个人生活和工作记录",
+        type: 'all',
+        copyright: `Copyright © ${new Date().getFullYear()} 7Wate, Inc.`,
       },
-    ],
+    },
+    theme: {
+      customCss: require.resolve("./src/css/custom.css"),
+    },
+    sitemap: {
+      changefreq: "weekly",
+      priority: 0.5,
+      filename: 'sitemap.xml',
+    },
+    googleAnalytics: {
+      trackingID: "G-MHMEL0F832",
+      anonymizeIP: true,
+    },
+    gtag: {
+      trackingID: 'G-MHMEL0F832',
+      anonymizeIP: true,
+    },
+  }),
+],
 
     "docusaurus-plugin-umami",
   ],
