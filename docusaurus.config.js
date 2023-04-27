@@ -368,35 +368,35 @@ const config = {
                 to: "/getting-started",
               },
               {
-                label: "程序设计语言",
+                label: "测试-程序设计语言",
                 to: "/programming-language",
               },
               {
-                label: "数据结构与算法",
+                label: "测试-数据结构与算法",
                 to: "/structures-algorithms",
               },
               {
-                label: "计算机组成",
+                label: "测试-计算机组成",
                 to: "/computer-composition",
               },
               {
-                label: "计算机网络",
+                label: "测试-计算机网络",
                 to: "/computer-network",
               },
               {
-                label: "操作系统",
+                label: "测试-操作系统",
                 to: "/operating-system",
               },
               {
-                label: "数据库系统",
+                label: "测试-数据库系统",
                 to: "/database-system",
               },
               {
-                label: "计算机系统安全",
+                label: "测试-计算机系统安全",
                 to: "/computer-security",
               },
               {
-                label: "软件工程",
+                label: "测试-软件工程",
                 to: "/software-engineering",
               },       
               {
