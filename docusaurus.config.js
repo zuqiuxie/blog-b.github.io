@@ -312,19 +312,6 @@ const config = {
       },
     ],
 // -----------------------------------------------------------------------------------
-[
-  "@docusaurus/plugin-content-docs",
-  {
-    id: "link",
-    path: "link",
-    routeBasePath: "link",
-    sidebarPath: require.resolve("./sidebars.js"),
-    editUrl: "https://git.7wate.com/zhouzhongping/wiki/src/branch/master",
-    showLastUpdateAuthor: true,
-    showLastUpdateTime: true,
-    breadcrumbs: false,
-  },
-],
 
     "docusaurus-plugin-umami",
   ],
@@ -443,7 +430,6 @@ const config = {
           },
           { to: "/life", label: "🚴🏻‍♀️ 生活", position: "right" },
           { to: "/journal", label: "📽️ 日志", position: "right" },
-          { to: "/link", label: "📽️ 导航", position: "right" },
         ],
       },
       algolia: {
