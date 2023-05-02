@@ -1,70 +1,61 @@
-# 7Wate 知识库
+# Website
 
-> Always For Freedom.
-> 一个喜欢异想天开的家伙 💨
+该网站是使用现代静态网站生成器 [Docusaurus 2](https://docusaurus.io/) 构建的。
 
-我在这里记录知识，希望对你也有帮助。👉👉👉 [English README](README_EN.md)
+主要记录了一些个人的前端笔记，以及收集的一些前端面试题。
 
-![站点首页](static/img/index.jpg)
+### 安装
 
-## 目录
-
-```markdown
-Wiki
-├─ 博客
-├─ 维基
-│    ├─ 基础入门
-│    ├─ 程序设计语言
-│    ├─ 数据结构与算法
-│    ├─ 计算机组成
-│    ├─ 计算机网络
-│    ├─ 操作系统
-│    ├─ 数据库系统
-│    ├─ 计算机系统安全
-│    ├─ 软件工程
-│    └─ 编译原理
-├─ 职业
-│    ├─ 求职之路
-│    ├─ 运维开发工程师
-│    └─ 信息安全工程师
-├─ 组织
-│    ├─ 开源社区
-│    ├─ 现代企业
-│    └─ 国家政府
-├─ 生活
-└─ 日志
+```
+$ npm install
 ```
 
-## 分支
+### 本地开发
 
-```markdown
-Main 主分支
-├─ dev 开发分支
-└─ phone 移动分支
+```
+$ npm start
 ```
 
-## CI&CD
+此命令启动本地开发服务器并打开浏览器窗口。大多数更改都会实时反映，而无需重新启动服务器。
 
- - build.yml：main 分支自动构建静态网站，并部署至 html 分支。
- - algolia.yml：每周三凌晨 02：00 自动爬取并推送至 Algolia。
-	 1. 设置 `ALGOLIA_ADMIN_API_KEY`、`ALGOLIA_APP_ID` 仓库环境密钥，密钥获取具体步骤请阅读 [使用 Docusaurus 搭建优秀个人wiki](https://blog.7wate.com/?p=75)。
-	 2. 修改 `.github\workflows\docsearch.json` 目录下 `start_urls` 和 `sitemap_urls` 键值为对应网站。
+### 构建打包
 
+```
+$ npm run build
+```
 
-## 贡献
+此命令将静态内容生成到“build”目录中，并且可以使用任何静态内容托管服务提供服务。
 
-欢迎各位 Fork 贡献，并提供指导纠错。 👊
+### 部署
 
-## 协议
+使用 SSH：
 
-- 所有**原创代码**采用 [GPL-3.0](http://www.thebigfly.com/gnu/FDLv1.3/) 协议，**原创非代码内容**采用[署名-相同方式共享 4.0 国际](http://creativecommons.org/licenses/by-sa/4.0/)。
+```
+$ USE_SSH=true yarn deploy
+```
 
-- 所有**引用第三方**内容仅为学术使用。其所属**著作权、版权均归原作者**所有，如有冒犯侵权，请[邮件联系](mailto:admin@7wate.com)删除。
+不使用 SSH：
 
-- **Docusaurus** is [MIT licensed.](https://github.com/facebook/docusaurus/blob/main/LICENSE)
+```
+$ GIT_USER=<Your GitHub username> yarn deploy
+```
 
-## 致谢
+如果您使用 GitHub 页面进行托管，此命令是构建网站并推送到 `gh-pages` 分支的便捷方式。
 
-感谢第三方原创作者的无私贡献！
+### 网站部分截图
 
-感觉 Docusaurus 项目官方的维护开发！
+#### 首页
+
+![](static/img/README/首页.png)
+
+#### 网站导航
+
+![](static/img/README/网站导航.png)
+
+#### 笔记
+
+![](static/img/README/笔记.png)
+
+#### 面试题
+
+![](static/img/README/面试题.png)

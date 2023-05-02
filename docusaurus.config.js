@@ -1,457 +1,192 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require("prism-react-renderer/themes/github");
-const darkCodeTheme = require("prism-react-renderer/themes/dracula");
+const lightCodeTheme = require('prism-react-renderer/themes/github');
+const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "7Wate",
-  tagline: "For Freedom",
-  url: "https://wiki.7wate.com",
-  baseUrl: "/",
-  onBrokenLinks: "log",
-  onBrokenMarkdownLinks: "log",
-  favicon: "img/favicon.ico",
+    title: 'Junjie',
+    tagline: 'Front-end Web Developer',
+    url: 'https://junjieweb.github.io',
+    baseUrl: '/',
+    onBrokenLinks: 'throw',
+    onBrokenMarkdownLinks: 'warn',
+    favicon: 'img/favicon.ico',
 
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  // organizationName: '7wate', // Usually your GitHub org/user name.
-  // projectName: 'wiki', // Usually your repo name.
+    // GitHub pages deployment config.
+    // If you aren't using GitHub pages, you don't need these.
+    organizationName: 'junjieweb', // Usually your GitHub org/user name.
+    projectName: 'junjieweb.github.io', // Usually your repo name.
 
-  // Even if you don't use internalization, you can use this field to set useful
-  // metadata like html lang. For example, if your site is Chinese, you may want
-  // to replace "en" with "zh-Hans".
-  i18n: {
-    defaultLocale: "zh-Hans",
-    locales: ["zh-Hans"],
-  },
+    // Even if you don't use internalization, you can use this field to set useful
+    // metadata like html lang. For example, if your site is Chinese, you may want
+    // to replace "en" with "zh-Hans".
+    i18n: {
+        defaultLocale: 'zh-CN',
+        locales: ['zh-CN'],
+    },
 
-  presets: [
-    [
-      "classic",
-      /** @type {import('@docusaurus/preset-classic').Options} */
-      ({
-        docs: {
-          sidebarPath: require.resolve("./sidebars.js"),
-          editUrl: "https://git.7wate.com/zhouzhongping/wiki/src/branch/master",
-          showLastUpdateAuthor: true,
-          showLastUpdateTime: true,
-          breadcrumbs: false,
-        },
-        blog: {
-          blogTitle: "Bin`s Blog",
-          blogDescription: "Bin 的个人生活和工作记录",
-          blogSidebarCount: 200,
-          blogSidebarTitle: "近期文章",
-          showReadingTime: true,
-          editUrl: "https://git.7wate.com/zhouzhongping/wiki/src/branch/master",
-          feedOptions: {
-            title: "Bin`s Blog",
-            description: "Bin 的个人生活和工作记录",
-            type: 'all',
-            copyright: `Copyright © ${new Date().getFullYear()} 7Wate, Inc.`,
-          },
-        },
-        theme: {
-          customCss: require.resolve("./src/css/custom.css"),
-        },
-        sitemap: {
-          changefreq: "weekly",
-          priority: 0.5,
-          filename: 'sitemap.xml',
-        },
-        googleAnalytics: {
-          trackingID: "G-MHMEL0F832",
-          anonymizeIP: true,
-        },
-        gtag: {
-          trackingID: 'G-MHMEL0F832',
-          anonymizeIP: true,
-        },
-      }),
-    ],
-  ],
-  plugins: [
-    [
-      "@docusaurus/plugin-content-docs",
-      {
-        id: "getting-started",
-        path: "wiki/getting-started",
-        routeBasePath: "getting-started",
-        sidebarPath: require.resolve("./sidebars.js"),
-        editUrl: "https://git.7wate.com/zhouzhongping/wiki/src/branch/master",
-        showLastUpdateAuthor: true,
-        showLastUpdateTime: true,
-        breadcrumbs: false,
-      },
-    ],
-    [
-      "@docusaurus/plugin-content-docs",
-      {
-        id: "programming-language",
-        path: "wiki/programming-language",
-        routeBasePath: "programming-language",
-        sidebarPath: require.resolve("./sidebars.js"),
-        editUrl: "https://git.7wate.com/zhouzhongping/wiki/src/branch/master",
-        showLastUpdateAuthor: true,
-        showLastUpdateTime: true,
-        breadcrumbs: false,
-      },
-    ],
-    [
-      "@docusaurus/plugin-content-docs",
-      {
-        id: "structures-algorithms",
-        path: "wiki/structures-algorithms",
-        routeBasePath: "structures-algorithms",
-        sidebarPath: require.resolve("./sidebars.js"),
-        editUrl: "https://git.7wate.com/zhouzhongping/wiki/src/branch/master",
-        showLastUpdateAuthor: true,
-        showLastUpdateTime: true,
-        breadcrumbs: false,
-      },
-    ],
-    [
-      "@docusaurus/plugin-content-docs",
-      {
-        id: "computer-composition",
-        path: "wiki/computer-composition",
-        routeBasePath: "computer-composition",
-        sidebarPath: require.resolve("./sidebars.js"),
-        editUrl: "https://git.7wate.com/zhouzhongping/wiki/src/branch/master",
-        showLastUpdateAuthor: true,
-        showLastUpdateTime: true,
-        breadcrumbs: false,
-      },
-    ],
-    [
-      "@docusaurus/plugin-content-docs",
-      {
-        id: "computer-network",
-        path: "wiki/computer-network",
-        routeBasePath: "computer-network",
-        sidebarPath: require.resolve("./sidebars.js"),
-        editUrl: "https://git.7wate.com/zhouzhongping/wiki/src/branch/master",
-        showLastUpdateAuthor: true,
-        showLastUpdateTime: true,
-        breadcrumbs: false,
-      },
-    ],
-    [
-      "@docusaurus/plugin-content-docs",
-      {
-        id: "operating-system",
-        path: "wiki/operating-system",
-        routeBasePath: "operating-system",
-        sidebarPath: require.resolve("./sidebars.js"),
-        editUrl: "https://git.7wate.com/zhouzhongping/wiki/src/branch/master",
-        showLastUpdateAuthor: true,
-        showLastUpdateTime: true,
-        breadcrumbs: false,
-      },
-    ],
-    [
-      "@docusaurus/plugin-content-docs",
-      {
-        id: "database-system",
-        path: "wiki/database-system",
-        routeBasePath: "database-system",
-        sidebarPath: require.resolve("./sidebars.js"),
-        editUrl: "https://git.7wate.com/zhouzhongping/wiki/src/branch/master",
-        showLastUpdateAuthor: true,
-        showLastUpdateTime: true,
-        breadcrumbs: false,
-      },
-    ],
-    [
-      "@docusaurus/plugin-content-docs",
-      {
-        id: "computer-security",
-        path: "wiki/computer-security",
-        routeBasePath: "computer-security",
-        sidebarPath: require.resolve("./sidebars.js"),
-        editUrl: "https://git.7wate.com/zhouzhongping/wiki/src/branch/master",
-        showLastUpdateAuthor: true,
-        showLastUpdateTime: true,
-        breadcrumbs: false,
-      },
-    ],
-    [
-      "@docusaurus/plugin-content-docs",
-      {
-        id: "software-engineering",
-        path: "wiki/software-engineering",
-        routeBasePath: "software-engineering",
-        sidebarPath: require.resolve("./sidebars.js"),
-        editUrl: "https://git.7wate.com/zhouzhongping/wiki/src/branch/master",
-        showLastUpdateAuthor: true,
-        showLastUpdateTime: true,
-        breadcrumbs: false,
-      },
-    ],
-    [
-      "@docusaurus/plugin-content-docs",
-      {
-        id: "compilation-principle",
-        path: "wiki/compilation-principle",
-        routeBasePath: "compilation-principle",
-        sidebarPath: require.resolve("./sidebars.js"),
-        editUrl: "https://git.7wate.com/zhouzhongping/wiki/src/branch/master",
-        showLastUpdateAuthor: true,
-        showLastUpdateTime: true,
-        breadcrumbs: false,
-      },
-    ],
-// -----------------------------------------------------------------------------------
-    [
-      "@docusaurus/plugin-content-docs",
-      {
-        id: "org",
-        path: "group/organization",
-        routeBasePath: "org",
-        sidebarPath: require.resolve("./sidebars.js"),
-        editUrl: "https://git.7wate.com/zhouzhongping/wiki/src/branch/master",
-        showLastUpdateAuthor: true,
-        showLastUpdateTime: true,
-        breadcrumbs: false,
-      },
-    ],
-    [
-      "@docusaurus/plugin-content-docs",
-      {
-        id: "com",
-        path: "group/company",
-        routeBasePath: "com",
-        sidebarPath: require.resolve("./sidebars.js"),
-        editUrl: "https://git.7wate.com/zhouzhongping/wiki/src/branch/master",
-        showLastUpdateAuthor: true,
-        showLastUpdateTime: true,
-        breadcrumbs: false,
-      },
-    ],
-    [
-      "@docusaurus/plugin-content-docs",
-      {
-        id: "gov",
-        path: "group/government",
-        routeBasePath: "gov",
-        sidebarPath: require.resolve("./sidebars.js"),
-        editUrl: "https://git.7wate.com/zhouzhongping/wiki/src/branch/master",
-        showLastUpdateAuthor: true,
-        showLastUpdateTime: true,
-        breadcrumbs: false,
-      },
-    ],
-// -----------------------------------------------------------------------------------
-    [
-      "@docusaurus/plugin-content-docs",
-      {
-        id: "roadmap",
-        path: "work/roadmap",
-        routeBasePath: "roadmap",
-        sidebarPath: require.resolve("./sidebars.js"),
-        editUrl: "https://git.7wate.com/zhouzhongping/wiki/src/branch/master",
-        showLastUpdateAuthor: true,
-        showLastUpdateTime: true,
-        breadcrumbs: false,
-      },
-    ],
-    [
-      "@docusaurus/plugin-content-docs",
-      {
-        id: "devops",
-        path: "work/devops",
-        routeBasePath: "devops",
-        sidebarPath: require.resolve("./sidebars.js"),
-        editUrl: "https://git.7wate.com/zhouzhongping/wiki/src/branch/master",
-        showLastUpdateAuthor: true,
-        showLastUpdateTime: true,
-        breadcrumbs: false,
-      },
-    ],
-    [
-      "@docusaurus/plugin-content-docs",
-      {
-        id: "devsec",
-        path: "work/devsec",
-        routeBasePath: "devsec",
-        sidebarPath: require.resolve("./sidebars.js"),
-        editUrl: "https://git.7wate.com/zhouzhongping/wiki/src/branch/master",
-        showLastUpdateAuthor: true,
-        showLastUpdateTime: true,
-        breadcrumbs: false,
-      },
-    ],
-// -----------------------------------------------------------------------------------
-    [
-      "@docusaurus/plugin-content-docs",
-      {
-        id: "life",
-        path: "life",
-        routeBasePath: "life",
-        sidebarPath: require.resolve("./sidebars.js"),
-        editUrl: "https://git.7wate.com/zhouzhongping/wiki/src/branch/master",
-        showLastUpdateAuthor: true,
-        showLastUpdateTime: true,
-        breadcrumbs: false,
-      },
-    ],
-// -----------------------------------------------------------------------------------
-    [
-      "@docusaurus/plugin-content-docs",
-      {
-        id: "journal",
-        path: "journal",
-        routeBasePath: "journal",
-        sidebarPath: require.resolve("./sidebars.js"),
-        editUrl: "https://git.7wate.com/zhouzhongping/wiki/src/branch/master",
-        showLastUpdateAuthor: true,
-        showLastUpdateTime: true,
-        breadcrumbs: false,
-      },
-    ],
-// -----------------------------------------------------------------------------------
-
-    "docusaurus-plugin-umami",
-  ],
-  themeConfig:
-    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-    ({
-      // announcementBar: {
-      //   id: 'support_us',
-      //   content:
-      //     'Always For Freedom. The site by 7Wate.',
-      //   backgroundColor: '#fafbfc',
-      //   textColor: '#091E42',
-      //   isCloseable: false,
-      // },
-      metadata: [
-        {
-          name: "keywords",
-          content: "7wate, wiki, blog, c, c++, java, python, linux",
-        },
-      ],
-      navbar: {
-        title: "📚 Bin's Wiki",
-        hideOnScroll: true,
-        // logo: {
-        //   alt: 'Site Logo',
-        //   src: 'img/logo.svg',
-        //   srcDark: 'img/logo_dark.svg',
-        //   href: 'https://docusaurus.io/',
-        //   target: '_self',
-        //   width: 32,
-        //   height: 32,
-        // },
-        items: [
-          { to: "/blog", label: "👨🏻‍🌾 博客", position: "right" },
-          {
-            position: "right",
-            label: "👨🏻‍🎓 精进",
-            items: [
-              {
-                label: "读书",
-                to: "/getting-started",
-              },
-              {
-                label: "测试-程序设计语言",
-                to: "/programming-language",
-              },
-              {
-                label: "测试-数据结构与算法",
-                to: "/structures-algorithms",
-              },
-              {
-                label: "测试-计算机组成",
-                to: "/computer-composition",
-              },
-              {
-                label: "测试-计算机网络",
-                to: "/computer-network",
-              },
-              {
-                label: "测试-操作系统",
-                to: "/operating-system",
-              },
-              {
-                label: "测试-数据库系统",
-                to: "/database-system",
-              },
-              {
-                label: "测试-计算机系统安全",
-                to: "/computer-security",
-              },
-              {
-                label: "测试-软件工程",
-                to: "/software-engineering",
-              },       
-              {
-                label: "编译原理",
-                to: "/compilation-principle",
-              },
-            ],
-          },
-          {
-            position: "right",
-            label: "👨‍💻 职业",
-            items: [
-              {
-                label: "求职之路",
-                to: "/roadmap",
-              },
-              {
-                label: "运维开发工程师",
-                to: "/devops",
-              },
-              {
-                label: "信息安全工程师",
-                to: "/devsec",
-              },
-            ]
-          },
-          {
-            position: "right",
-            label: "💼 组织",
-            items: [
-              {
-                label: "自由社区",
-                to: "/org",
-              },
-              {
-                label: "现代企业",
-                to: "/com",
-              },
-              {
-                label: "国家政府",
-                to: "/gov",
-              },
-            ]
-          },
-          { to: "/life", label: "🚴🏻‍♀️ 生活", position: "right" },
-          { to: "/journal", label: "📽️ 日志", position: "right" },
+    presets: [
+        [
+            'classic',
+            /** @type {import('@docusaurus/preset-classic').Options} */
+            ({
+                docs: {
+                    path: 'docs',
+                    sidebarPath: require.resolve('./sidebars.js'),
+                    // Please change this to your repo.
+                    // Remove this to remove the "edit this page" links.
+                    editUrl:
+                        'https://github.com/junjieweb/junjieweb.github.io/tree/main',
+                },
+                blog: {
+                    showReadingTime: true,
+                    postsPerPage: 5,
+                    blogSidebarCount: 'ALL',
+                    blogSidebarTitle: 'All our posts',
+                    // Please change this to your repo.
+                    // Remove this to remove the "edit this page" links.
+                    editUrl:
+                        'https://github.com/junjieweb/junjieweb.github.io/tree/main',
+                },
+                theme: {
+                    customCss: require.resolve('./src/css/custom.css'),
+                },
+            }),
         ],
-      },
-      algolia: {
-        apiKey: "5e8a802658272c29d7a7a75fe754fc61",
-        appId: "3J083Q2HGW",
-        indexName: "wiki",
-      },
-      umami: {
-        websiteid: "7efcd733-c232-43db-9f17-10a00c53b152",
-        src: "https://umami.7wate.org/umami.js",
-      },
-      footer: {
-        style: "dark",
-        copyright: `Copyright © ${new Date().getFullYear()} 7Wate, Inc. Built with <a href="https://www.docusaurus.cn/" target="_blank" rel="noopener noreferrer">Docusaurus</a>.<br>Powered by <a href="https://webify.cloudbase.net/" target="_blank" rel="noopener noreferrer">CloudBase Webify</a>`,
-      },
-      prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
-        defaultLanguage: "markdown",
-        additionalLanguages: ["java", "git","nginx","http"],
-      },
-    }),
+    ],
+
+    themeConfig:
+    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
+        ({
+            liveCodeBlock: {
+                playgroundPosition: 'bottom',
+            },
+            docs: {
+                sidebar: {
+                    hideable: true,
+                    autoCollapseCategories: true,
+                },
+            },
+            colorMode: {
+                defaultMode: 'light',
+                disableSwitch: false,
+                respectPrefersColorScheme: true,
+            },
+            announcementBar: {
+                id: 'announcementBar-2', // Increment on change
+                // content: `⭐️ If you like this site, give it a star on <a target="_blank" rel="noopener noreferrer" href="https://github.com/junjieweb/junjieweb.github.io">GitHub</a>`,
+                content: `⭐️ 如果你喜欢这个网站，在 <a style="color: red" target="_blank" rel="noopener noreferrer" href="https://github.com/junjieweb/junjieweb.github.io">GitHub</a> 上给它一颗 ⭐ `,
+                // isCloseable: false, // 是否可关闭
+            },
+            // image: 'img/docusaurus-soc.png',
+            navbar: {
+                title: 'Junjie',
+                logo: {
+                    alt: 'My Site Logo',
+                    src: 'img/logo.svg',
+                    srcDark: 'img/docusaurus_keytar.svg',
+                    width: 32,
+                    height: 32,
+                },
+                items: [
+                    {
+                        type: 'doc',
+                        docId: 'MDN',
+                        position: 'left',
+                        label: '📒前端笔记',
+                    },
+                    {
+                        type: 'docSidebar',
+                        position: 'left',
+                        sidebarId: 'interview',
+                        label: '👨‍💻前端面试题',
+                    },
+                    {
+                        type: 'docSidebar',
+                        position: 'left',
+                        sidebarId: 'UHF',
+                        label: '🚀超高频前端面试题',
+                    },
+                    {to: '/website', label: '🌐网站导航', position: 'left'},
+                    {to: '/Tools-website', label: '🧰工具网站', position: 'left'},
+                    {to: '/blog', label: '📑Blog', position: 'left'},
+                    {
+                        href: 'https://github.com/junjieweb/junjieweb.github.io',
+                        position: 'right',
+                        className: 'header-github-link',
+                        'aria-label': 'GitHub repository',
+                    },
+                ],
+            },
+            footer: {
+                style: 'dark',
+                links: [
+                    {
+                        title: '文档',
+                        items: [
+                            {
+                                label: '笔记',
+                                to: '/docs/MDN',
+                            },
+                            {
+                                label: '面试题',
+                                to: '/docs/interview-questions/html面试题',
+                            },
+                            {
+                                label: '网站导航',
+                                to: '/website',
+                            },
+                            {
+                                label: '工具网站',
+                                to: '/Tools-website',
+                            },
+                        ],
+                    },
+                    {
+                        title: '社区',
+                        items: [
+                            {
+                                label: 'Stack Overflow',
+                                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                            },
+                            {
+                                label: ' Docusaurus',
+                                href: 'https://docusaurus.io/zh-CN/',
+                            },
+                            {
+                                label: 'Discord',
+                                href: 'https://discordapp.com/invite/docusaurus',
+                            },
+                        ],
+                    },
+                    {
+                        title: '更多',
+                        items: [
+                            {
+                                label: '博客',
+                                to: '/blog',
+                            },
+                            {
+                                label: 'GitHub',
+                                href: 'https://github.com/junjieweb',
+                            },
+                            {
+                                label: 'JetBrains Academy',
+                                href: 'https://hyperskill.org/join/1ffe05030',
+                            },
+                        ],
+                    },
+                ],
+
+                copyright: `Copyright © ${new Date().getFullYear()} junjieweb. Built with Docusaurus.`,
+            },
+            prism: {
+                theme: lightCodeTheme,
+                darkTheme: darkCodeTheme,
+            },
+        }),
 };
 
 module.exports = config;
