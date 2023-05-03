@@ -4,23 +4,23 @@
 
 ## 网盘资料搜索神器
 
-|           网站           |            网址            |                           备注                           |
-| :-----------------------: | :-------------------------: | :------------------------------------------------------: |
-|    奈斯搜索 - 阿里云盘    |   https://www.niceso.fun/   |            超丰富阿里云盘各类资源，直达网盘。            |
-|          小白盘          | https://www.xiaobaipan.com/ |             需要关注公众号才能获取资源链接。             |
-|     telegram中文搜索     |   http://www.sssoou.com/   |            电影、网盘、教程等资源，直达链接。            |
-|     飞猪盘 - 百度网盘     | https://www.feizhupan.com/ |               百度网盘资源，需要关注公众号               |
-|    盘他一下 - 百度网盘    |    https://panother.com/    |             微信扫码登录，百度网盘，资源一般             |
-|         飞鱼盘搜         |    https://feiyu100.cn/    |    需关注公众号，百度云盘、蓝奏云盘、天翼云各类资料。    |
-|     bay搜 - 百度网盘     |    http://www.bdyso.com/    |                   百度网盘，链接直达。                   |
-|       乌鸦搜 - 网盘       |  https://www.wuyasou.com/  |                       网盘搜索引擎                       |
-|       橘子盘搜-影视       |    https://www.nmme.cc/    | 影视资源，搜索网盘资源，百度云、阿里云、迅雷网盘等资源。 |
-| 学搜搜(酷搜kolsou) - 百度 | https://www.xuesousou.com/ |                百度网盘，主要是学习资料。                |
-|     UP云搜 - 云盘资源     |    https://upyunso3.com/    |         阿里云盘，学习资料、影视资料，直达网盘。         |
-|          UP云搜          |  https://www.upyunso.com/  |         阿里云盘，学习资料、影视资料，直达网盘。         |
-|         集知盒子         | https://www.jizhihezi.com/ |                                                          |
-|        爱达杂货铺        |      https://adzhp.cn/      |                                                          |
-|         iMyShare         |    https://imyshare.com/    |         收集免费实用有趣的东西，做最好的资源导航         |
+|           网站           |            网址            |                   备注                   |
+| :-----------------------: | :-------------------------: | :--------------------------------------: |
+|    奈斯搜索 - 阿里云盘    |   https://www.niceso.fun/   |     超丰富阿里云盘各类资源，直达网盘     |
+|          小白盘          | https://www.xiaobaipan.com/ |      需要关注公众号才能获取资源链接      |
+|     telegram中文搜索     |   http://www.sssoou.com/   |     电影、网盘、教程等资源，直达链接     |
+|     飞猪盘 - 百度网盘     | https://www.feizhupan.com/ |       百度网盘资源，需要关注公众号       |
+|    盘他一下 - 百度网盘    |    https://panother.com/    |     微信扫码登录，百度网盘，资源一般     |
+|         飞鱼盘搜         |    https://feiyu100.cn/    |  关注公众号，百度云盘、蓝奏云盘、天翼云  |
+|     bay搜 - 百度网盘     |    http://www.bdyso.com/    |            百度网盘，链接直达            |
+|       乌鸦搜 - 网盘       |  https://www.wuyasou.com/  |               网盘搜索引擎               |
+|       橘子盘搜-影视       |    https://www.nmme.cc/    |    影视资源，百度云、阿里云、迅雷网盘    |
+| 学搜搜(酷搜kolsou) - 百度 | https://www.xuesousou.com/ |        百度网盘，主要是学习资料。        |
+|     UP云搜 - 云盘资源     |    https://upyunso3.com/    | 阿里云盘，学习资料、影视资料，直达网盘。 |
+|          UP云搜          |  https://www.upyunso.com/  | 阿里云盘，学习资料、影视资料，直达网盘。 |
+|         集知盒子         | https://www.jizhihezi.com/ |                                          |
+|        爱达杂货铺        |      https://adzhp.cn/      |                                          |
+|         iMyShare         |    https://imyshare.com/    | 收集免费实用有趣的东西，做最好的资源导航 |
 
 ---
 
