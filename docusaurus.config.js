@@ -111,7 +111,7 @@ const config = {
                     },
                     {to: '/website', label: '🌐网站导航', position: 'left'},
                     {to: '/Tools-website', label: '🧰工具网站', position: 'left'},
-                    {to: '/Tools-website2', label: '🧰工具网站2', position: 'left'},
+                    {to: '/Tools-website2', label: '🧰成长网站', position: 'left'},
                     {to: '/blog', label: '📑Blog', position: 'left'},
                     {
                         href: 'https://github.com/junjieweb/junjieweb.github.io',
