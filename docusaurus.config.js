@@ -95,13 +95,13 @@ const config = {
                         type: 'doc',
                         docId: 'MDN',
                         position: 'left',
-                        label: '📒前端笔记',
+                        label: '📒工作',
                     },
                     {
                         type: 'docSidebar',
                         position: 'left',
                         sidebarId: 'interview',
-                        label: '👨‍💻前端面试题',
+                        label: '👨‍💻生活',
                     },
                     {
                         type: 'docSidebar',
