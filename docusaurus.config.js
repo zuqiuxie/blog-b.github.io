@@ -107,7 +107,7 @@ const config = {
                         type: 'docSidebar',
                         position: 'left',
                         sidebarId: 'UHF',
-                        label: '🚀超高频前端面试题',
+                        label: '🚀超高频前端面试题2',
                     },
                     {to: '/website', label: '🌐网站导航', position: 'left'},
                     {to: '/Tools-website', label: '🧰工具网站', position: 'left'},

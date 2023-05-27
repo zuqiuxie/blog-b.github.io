@@ -1,8 +1,7 @@
 ---
 sidebar_position: 1
 ---
-
-# HTML和CSS
+# HTML和CSS2
 
 ## 001 - script标签中defer和async的区别
 
@@ -112,23 +111,20 @@ sidebar_position: 1
 - **拖放**：`<img draggable="true"/>` 如果该属性没有设值，则默认值 为 auto ，表示使用浏览器定义的默认行为。
   默认情况下，只有已选中的文本、图片、链接可以拖动。对其它的元素来说，必须按拖动机制的顺序设置
   ondragstart 事件才能正常工作
-
-- **`Canvas`**：Canvas API 提供了一个通过JavaScript 和 HTML的`<canvas>`元素来绘制图形的方式。它可以用于动画、游戏画面、数据可视化、图片编辑以及实时视频处理等方面。
+- **`Canvas`**：Canvas API 提供了一个通过JavaScript 和 HTML的 `<canvas>`元素来绘制图形的方式。它可以用于动画、游戏画面、数据可视化、图片编辑以及实时视频处理等方面。
   `canvas` 元素使用 `JavaScript`
   在网页上绘制图像。画布是一个矩形区域，可以控制其每一像素。canvas拥有多种绘制路径、矩形、圆形、字符以及添加图像的方法。
 
-     ```html
-   <canvas id="myCanvas" width="200" height="100" style="background:#bfa"></canvas>
-     ```
-
+  ```html
+  <canvas id="myCanvas" width="200" height="100" style="background:#bfa"></canvas>
+  ```
 - **可缩放矢量图形（Scalable Vector Graphics，SVG）**：是一种用于描述二维的矢量图形，基于 XML
   的标记语言。作为一个基于文本的开放网络标准，SVG能够优雅而简洁地渲染不同大小的图形，并和CSS，DOM，JavaScript和SMIL等其他网络标准无缝衔接。本质上，SVG
   相对于图像，就好比 HTML 相对于文本。
-
 - 地理定位：`Geolocation` 接口是一个用来获取设备地理位置的可编程的对象，它可以让Web内容访问到设备的地理位置，这将允许Web应用基于用户的地理位置提供定制的信息。说实话：其实Geolocation
   就是用来获取到当前设备的经纬度（位置）
 
-  带有此接口的对象可以用由 `Navigator` 实现的属性`NavigatorGeolocation.geolocation` 来获得。
+  带有此接口的对象可以用由 `Navigator` 实现的属性 `NavigatorGeolocation.geolocation` 来获得。
 
 ## 003 - CSS选择器及优先级
 
@@ -136,23 +132,21 @@ sidebar_position: 1
 
 - 基础选择器
 
-    - 通配符选择器
-    - 标签选择器/元素选择器
-    - 类选择器
-    - id选择器
-
+  - 通配符选择器
+  - 标签选择器/元素选择器
+  - 类选择器
+  - id选择器
 - 复合选择器
 
-    - 后代选择器
-    - 子代选择器
-    - 并集选择器
-    - 伪类选择器
-
+  - 后代选择器
+  - 子代选择器
+  - 并集选择器
+  - 伪类选择器
 - 新增选择器
 
-    - 属性选择器
-    - 结构伪类选择器
-    - 伪元素选择器
+  - 属性选择器
+  - 结构伪类选择器
+  - 伪元素选择器
 
 #### 优先级
 
@@ -192,16 +186,16 @@ sidebar_position: 1
 - `clip/clip-path` 使用元素裁剪的方法来实现元素的隐藏，这种方法下，元素仍在页面中占据位置
 - `transform: scale(0,0)` 将元素缩放为 0，来实现元素的隐藏。这种方法下，元素仍在页面中占据位置
 
-## 006 - `display:none`与`visibility:hidden`的区别
+## 006 - `display:none`与 `visibility:hidden`的区别
 
 这两个属性都是让元素隐藏，不可见。两者区别如下：
 
 1. **在渲染树中**
-    - `display:none` 会让元素完全从渲染树中消失，渲染时不会占据任何空间；
-    - `visibility:hidden` 不会让元素从渲染树中消失，渲染的元素还会占据相应的空间，只是内容不可见。
+   - `display:none` 会让元素完全从渲染树中消失，渲染时不会占据任何空间；
+   - `visibility:hidden` 不会让元素从渲染树中消失，渲染的元素还会占据相应的空间，只是内容不可见。
 2. **是否是继承属性**
-    - `display:none`是非继承属性，子孙节点会随着父节点从渲染树消失，通过修改子孙节点的属性也无法显示；
-    - `visibility:hidden`是继承属性，子孙节点消失是由于继承了hidden，通过设置visibility:visible可以让子孙节点显示；
+   - `display:none`是非继承属性，子孙节点会随着父节点从渲染树消失，通过修改子孙节点的属性也无法显示；
+   - `visibility:hidden`是继承属性，子孙节点消失是由于继承了hidden，通过设置visibility:visible可以让子孙节点显示；
 3. 修改常规文档流中元素的 `display` 通常会造成文档的重排，但是修改 `visibility` 属性只会造成本元素的重绘；
 4. 如果使用读屏器，设置为 `display:none` 的内容不会被读取，设置为 `visibility:hidden` 的内容会被读取。
 
@@ -224,8 +218,8 @@ sidebar_position: 1
 - 位移：`transform：translate（100px，100px，100px）`
 - 旋转：`transform：rotate（0，0，1，45deg）`
 - 3D呈现：`transform-style`
-    - `flat`：子元素不开启3d空间
-    - `preserve-3d`：子元素开启3d空间
+  - `flat`：子元素不开启3d空间
+  - `preserve-3d`：子元素开启3d空间
 - 透视：`perspective`（单位px），人的眼睛到屏幕的距离；近大远小。
 
 **动画** `@keyframes 动画名称 {0% {width：100px} 100% {width：200px}}`
@@ -251,7 +245,7 @@ sidebar_position: 1
 **`absolute`**：生成绝对定位的元素，相对于static定位以外的一个有定位的父元素进行定位。元素的位置通过left、top、right、bottom属性进行规定。
 元素的定位相对于前两者要复杂许多。如果为 `absolute`
 设置了
-top、left，浏览器会根据什么去确定它的纵向和横向的偏移量呢？答案是浏览器会递归查找该元素的所有父元素，如果找到一个设置了`position:relative/absolute/fixed`
+top、left，浏览器会根据什么去确定它的纵向和横向的偏移量呢？答案是浏览器会递归查找该元素的所有父元素，如果找到一个设置了 `position:relative/absolute/fixed`
 的元素，就以该元素为基准定位，如果没找到，就以浏览器边界定位。
 
 **`fixed`**：生成固定定位的元素，指定元素相对于屏幕视⼝（viewport）的位置来指定元素位置。元素的位置在屏幕滚动时不会改变，⽐如回到顶部的按钮⼀般都是⽤此定位⽅式。
@@ -264,7 +258,7 @@ bottom 或 left 四个阈值其中之一，才可使粘性定位生效。否则�
 
 **`inherit`**：规定从父元素继承 `position` 属性的值
 
-## 009 - `absolute`和`fixed`的共同点和不同点
+## 009 - `absolute`和 `fixed`的共同点和不同点
 
 **共同点**
 
@@ -277,7 +271,7 @@ bottom 或 left 四个阈值其中之一，才可使粘性定位生效。否则�
 - absolute与fixed的根元素不同，absolute的根元素可以设置，fixed根元素是浏览器。
 - 在有滚动条的页面中，absolute会跟着父元素进行移动，fixed固定在页面的具体位置。
 
-## 010 - 对`sticky`定位的理解
+## 010 - 对 `sticky`定位的理解
 
 `sticky` 英文字面意思是粘贴，所以可以把它称之为粘性定位。语法：position: sticky; 基于用户的滚动位置来定位。
 
@@ -308,10 +302,10 @@ right, bottom 或 left 之一，换言之，指定 top, right, bottom
 
 - 百分比（%）：大部分相对于祖先元素，也有相对于自身的情况比如（border-radius、translate等)
 - vw/vm：相对于视窗的尺寸
-    - vw：相对于视窗的宽度，1vw = 1/100视口宽度；
-    - vh：相对于视窗的高度，1vh = 1/100视口高度；
-    - vmin：vw和vh中的较小值；
-    - vmax：vw和vh中的较大值；
+  - vw：相对于视窗的宽度，1vw = 1/100视口宽度；
+  - vh：相对于视窗的高度，1vh = 1/100视口高度；
+  - vmin：vw和vh中的较小值；
+  - vmax：vw和vh中的较大值；
 
 ## 012 - px、em、rem的区别及使用场景
 
@@ -332,15 +326,12 @@ right, bottom 或 left 之一，换言之，指定 top, right, bottom
 1. 绝对定位+transform
 
    需考虑浏览器兼容问题， 父亲给一个高度，position：relative；子盒子position：absolute，top：50%；left：50%；transform：translate（-50%，-50%）
-
 2. 绝对定位+margin:auto
 
    父容器给一个高度，position：relative；子容器有宽度和高度，position：absolute，上下左右都是0，margin：auto；
-
 3. 绝对定位+margin负值
 
    父容器给一个高度，position：relative；子盒子绝对定位，top：50%；left：50%，margin-top： - 高度/2 px;margin-left:- 宽度/2 px
-
 4. flex布局
 
    父容器给一个高度，display：flex，justify-content：center，align-items：center；
@@ -353,23 +344,23 @@ container），简称"容器"。它的所有子元素自动成为容器成员，
 axis）和垂直的交叉轴（cross axis），项目默认沿水平主轴排列。
 
 - 容器属性
-    - flex-direction属性决定主轴的方向（即项目的排列方向）。
-    - flex-wrap属性定义，如果一条轴线排不下，是否换行。
-    - flex-flow属性是flex-direction属性和flex-wrap属性的简写形式，默认值为row nowrap。
-    - justify-content属性定义了项目在主轴上的对齐方式。
-    - align-items属性定义单行项目在侧轴上如何对齐。
-    - align-content属性定义了多行项目在侧轴的对齐方式。如果项目只有一行，该属性不起作用。
+  - flex-direction属性决定主轴的方向（即项目的排列方向）。
+  - flex-wrap属性定义，如果一条轴线排不下，是否换行。
+  - flex-flow属性是flex-direction属性和flex-wrap属性的简写形式，默认值为row nowrap。
+  - justify-content属性定义了项目在主轴上的对齐方式。
+  - align-items属性定义单行项目在侧轴上如何对齐。
+  - align-content属性定义了多行项目在侧轴的对齐方式。如果项目只有一行，该属性不起作用。
 - 项目属性
-    - order属性定义项目的排列顺序。数值越小，排列越靠前，默认为0。
-    - flex-grow属性定义项目的放大比例，默认为0，即如果存在剩余空间，也不放大。
-    - flex-shrink属性定义了项目的缩小比例，默认为1，即如果空间不足，该项目将缩小。
-    - flex-basis属性定义了在分配多余空间之前，项目占据的主轴空间。浏览器根据这个属性，计算主轴是否有多余空间。它的默认值为auto，即项目的本来大小。
-    - flex属性是flex-grow，flex-shrink和flex-basis的简写，默认值为0 1 auto。
-        - flex:1 表示什么
-            - flex属性是flex-grow，flex-shrink和flex-basis的简写，默认值为0 1 auto。flex:1 表示 flex: 1 1 auto，它还有另外两种完整写法,
-              分别是
-              initial (0 1 auto) 和 none (0 0 auto)
-    - align-self属性允许单个项目有与其他项目不一样的对齐方式，可覆盖align-items属性。默认值为auto，表示继承父元素的align-items属性，如果没有父元素，则等同于stretch。
+  - order属性定义项目的排列顺序。数值越小，排列越靠前，默认为0。
+  - flex-grow属性定义项目的放大比例，默认为0，即如果存在剩余空间，也不放大。
+  - flex-shrink属性定义了项目的缩小比例，默认为1，即如果空间不足，该项目将缩小。
+  - flex-basis属性定义了在分配多余空间之前，项目占据的主轴空间。浏览器根据这个属性，计算主轴是否有多余空间。它的默认值为auto，即项目的本来大小。
+  - flex属性是flex-grow，flex-shrink和flex-basis的简写，默认值为0 1 auto。
+    - flex:1 表示什么
+      - flex属性是flex-grow，flex-shrink和flex-basis的简写，默认值为0 1 auto。flex:1 表示 flex: 1 1 auto，它还有另外两种完整写法,
+        分别是
+        initial (0 1 auto) 和 none (0 0 auto)
+  - align-self属性允许单个项目有与其他项目不一样的对齐方式，可覆盖align-items属性。默认值为auto，表示继承父元素的align-items属性，如果没有父元素，则等同于stretch。
 
 ## 015 - 如何解决1px问题
 
@@ -385,13 +376,13 @@ axis）和垂直的交叉轴（cross axis），项目默认沿水平主轴排列
 **解决方案**
 
 - 直接写 0.5px
-    - 目前为止最简单的一种方法。这种方法的缺陷在于兼容性不行，IOS 系统需要8及以上的版本，安卓系统则直接不兼容。
+  - 目前为止最简单的一种方法。这种方法的缺陷在于兼容性不行，IOS 系统需要8及以上的版本，安卓系统则直接不兼容。
 - 伪元素先放大后缩小
-    - 思路是先放大、后缩小：在目标元素的后面追加一个 ::after 伪元素，让这个元素布局为 absolute
-      之后、整个伸展开铺在目标元素上，然后把它的宽和高都设置为目标元素的两倍，border值设为 1px。接着借助 CSS
-      动画特效中的放缩能力，把整个伪元素缩小为原来的 50%。此时，伪元素的宽高刚好可以和原有的目标元素对齐，而 border 也缩小为了
-      1px 的二分之一，间接地实现了 0.5px 的效果。
-        - 这个方法的可行性会更高，兼容性也更好。唯一的缺点是代码会变多。
+  - 思路是先放大、后缩小：在目标元素的后面追加一个 ::after 伪元素，让这个元素布局为 absolute
+    之后、整个伸展开铺在目标元素上，然后把它的宽和高都设置为目标元素的两倍，border值设为 1px。接着借助 CSS
+    动画特效中的放缩能力，把整个伪元素缩小为原来的 50%。此时，伪元素的宽高刚好可以和原有的目标元素对齐，而 border 也缩小为了
+    1px 的二分之一，间接地实现了 0.5px 的效果。
+    - 这个方法的可行性会更高，兼容性也更好。唯一的缺点是代码会变多。
 - 思路三：viewport 缩放来解决
-    - `<meta name="viewport" content="initial-scale=0.5, maximum-scale=0.5, minimum-scale=0.5, user-scalable=no">`
-    - 整个页面被缩放了。这时 1px 已经被处理成物理像素大小，这样的大小在手机上显示边框很合适。但是，一些原本不需要被缩小的内容，比如文字、图片等，也被无差别缩小掉了。
+  - `<meta name="viewport" content="initial-scale=0.5, maximum-scale=0.5, minimum-scale=0.5, user-scalable=no">`
+  - 整个页面被缩放了。这时 1px 已经被处理成物理像素大小，这样的大小在手机上显示边框很合适。但是，一些原本不需要被缩小的内容，比如文字、图片等，也被无差别缩小掉了。
