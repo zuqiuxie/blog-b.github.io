@@ -1,7 +1,6 @@
 ---
-sidebar_position: 5
+sidebar_position: 6
 ---
-
 # Vue3快速上手
 
 ![vue3](https://user-images.githubusercontent.com/499550/93624428-53932780-f9ae-11ea-8d16-af949e16a09f.png)
@@ -10,16 +9,14 @@ sidebar_position: 5
 
 - 2020年9月18日，Vue.js发布3.0版本，代号：One Piece（海贼王）
 - 耗时2年多、[2600+次提交](https://github.com/vuejs/vue-next/graphs/commit-activity)、[30+个RFC](https://github.com/vuejs/rfcs/tree/master/active-rfcs)、[600+次PR](https://github.com/vuejs/vue-next/pulls?q=is%3Apr+is%3Amerged+-author%3Aapp%2Fdependabot-preview+)、[99位贡献者](https://github.com/vuejs/vue-next/graphs/contributors)
-- github上的tags地址：<https://github.com/vuejs/vue-next/releases/tag/v3.0.0>
+- github上的tags地址：[https://github.com/vuejs/vue-next/releases/tag/v3.0.0](https://github.com/vuejs/vue-next/releases/tag/v3.0.0)
 
 ## Vue3带来了什么
 
 ### 1.性能的提升
 
 - 打包大小减少41%
-
 - 初次渲染快55%, 更新渲染快133%
-
 - 内存减少54%
 
   ......
@@ -27,7 +24,6 @@ sidebar_position: 5
 ### 2.源码的升级
 
 - 使用Proxy代替defineProperty实现响应式
-
 - 重写虚拟DOM的实现和Tree-Shaking
 
   ......
@@ -46,6 +42,7 @@ sidebar_position: 5
    - provide与inject
    - ......
 2. 新的内置组件
+
    - Fragment
    - Teleport
    - Suspense
@@ -60,7 +57,7 @@ sidebar_position: 5
 
 ### 1.使用 vue-cli 创建
 
-官方文档：<https://cli.vuejs.org/zh/guide/creating-a-project.html#vue-create>
+官方文档：[https://cli.vuejs.org/zh/guide/creating-a-project.html#vue-create](https://cli.vuejs.org/zh/guide/creating-a-project.html#vue-create)
 
 ```bash
 ## 查看@vue/cli版本，确保@vue/cli版本在4.5.0以上
@@ -76,9 +73,9 @@ npm run serve
 
 ### 2.使用 vite 创建
 
-官方文档：<https://v3.cn.vuejs.org/guide/installation.html#vite>
+官方文档：[https://v3.cn.vuejs.org/guide/installation.html#vite](https://v3.cn.vuejs.org/guide/installation.html#vite)
 
-vite官网：<https://vitejs.cn>
+vite官网：[https://vitejs.cn](https://vitejs.cn)
 
 - 什么是vite？—— 新一代前端构建工具。
 - 优势如下：
@@ -103,39 +100,39 @@ npm run dev
 
 ## 二、常用 Composition API
 
-官方文档: <https://v3.cn.vuejs.org/guide/composition-api-introduction.html>
+官方文档: [https://v3.cn.vuejs.org/guide/composition-api-introduction.html](https://v3.cn.vuejs.org/guide/composition-api-introduction.html)
 
 ### 1.拉开序幕的setup
 
 1. 理解：Vue3.0中一个新的配置项，值为一个函数。
-2. setup是所有<strong style={{color:"#DD5145"}}>Composition API（组合API）</strong><i style={{color:'gray',fontWeight:'bold'}}>“ 表演的舞台 ”</i>。
-4. 组件中所用到的：数据、方法等等，均要配置在setup中。
-5. setup函数的两种返回值：
+2. setup是所有<strong style={{color:"#DD5145"}}>Composition API（组合API）`</strong>`<i style={{color:'gray',fontWeight:'bold'}}>“ 表演的舞台 ”`</i>`。
+3. 组件中所用到的：数据、方法等等，均要配置在setup中。
+4. setup函数的两种返回值：
    1. 若返回一个对象，则对象中的属性、方法, 在模板中均可以直接使用。（重点关注！）
-   2. <span style={{color:"#aad"}}>若返回一个渲染函数：则可以自定义渲染内容。（了解）</span>
-6. 注意点：
+   2. <span style={{color:"#aad"}}>若返回一个渲染函数：则可以自定义渲染内容。（了解）
+5. 注意点：
    1. 尽量不要与Vue2.x配置混用
-      - Vue2.x配置（data、methods、computed...）中<strong style={{color:"#DD5145"}}>可以访问到</strong>setup中的属性、方法。
-      - 但在setup中<strong style={{color:"#DD5145"}}>不能访问到</strong>Vue2.x配置（data、methods、computed...）。
+      - Vue2.x配置（data、methods、computed...）中<strong style={{color:"#DD5145"}}>可以访问到`</strong>`setup中的属性、方法。
+      - 但在setup中<strong style={{color:"#DD5145"}}>不能访问到`</strong>`Vue2.x配置（data、methods、computed...）。
       - 如果有重名, setup优先。
    2. setup不能是一个async函数，因为返回值不再是return的对象, 而是promise, 模板看不到return对象中的属性。（后期也可以返回一个Promise实例，但需要Suspense和异步组件的配合）
 
 ### 2.ref函数
 
 - 作用: 定义一个响应式的数据
-- 语法: ```const xxx = ref(initValue)```
-  - 创建一个包含响应式数据的<strong style={{color:"#DD5145"}}>引用对象（reference对象，简称ref对象）</strong>。
-  - JS中操作数据： ```xxx.value```
-  - 模板中读取数据: 不需要.value，直接：```<div>{{xxx}}</div>```
+- 语法: ``const xxx = ref(initValue)``
+  - 创建一个包含响应式数据的<strong style={{color:"#DD5145"}}>引用对象（reference对象，简称ref对象）`</strong>`。
+  - JS中操作数据： ``xxx.value``
+  - 模板中读取数据: 不需要.value，直接：``<div>{{xxx}}</div>``
 - 备注：
   - 接收的数据可以是：基本类型、也可以是对象类型。
-  - 基本类型的数据：响应式依然是靠``Object.defineProperty()``的```get```与```set```完成的。
-  - 对象类型的数据：内部 <i style={{color:"gray", fontWeight:"bold"}}>“ 求助 ”</i> 了Vue3.0中的一个新函数—— ```reactive```函数。
+  - 基本类型的数据：响应式依然是靠 ``Object.defineProperty()``的 ``get``与 ``set``完成的。
+  - 对象类型的数据：内部 <i style={{color:"gray", fontWeight:"bold"}}>“ 求助 ”`</i>` 了Vue3.0中的一个新函数—— ``reactive``函数。
 
 ### 3.reactive函数
 
-- 作用: 定义一个<strong style={{color:"#DD5145"}}>对象类型</strong>的响应式数据（基本类型不要用它，要用```ref```函数）
-- 语法：```const 代理对象= reactive(源对象)```接收一个对象（或数组），返回一个<strong style={{color:"#DD5145"}}>代理对象（Proxy的实例对象，简称proxy对象）</strong>
+- 作用: 定义一个<strong style={{color:"#DD5145"}}>对象类型`</strong>`的响应式数据（基本类型不要用它，要用 ``ref``函数）
+- 语法：``const 代理对象= reactive(源对象)``接收一个对象（或数组），返回一个<strong style={{color:"#DD5145"}}>代理对象（Proxy的实例对象，简称proxy对象）`</strong>`
 - reactive定义的响应式数据是“深层次的”。
 - 内部基于 ES6 的 Proxy 实现，通过代理对象操作源对象内部数据进行操作。
 
@@ -144,8 +141,8 @@ npm run dev
 #### vue2.x的响应式
 
 - 实现原理：
-  - 对象类型：通过```Object.defineProperty()```对属性的读取、修改进行拦截（数据劫持）。
 
+  - 对象类型：通过 ``Object.defineProperty()``对属性的读取、修改进行拦截（数据劫持）。
   - 数组类型：通过重写更新数组的一系列方法来实现拦截。（对数组的变更方法进行了包裹）。
 
     ```js
@@ -154,8 +151,8 @@ npm run dev
         set () {}
     })
     ```
-
 - 存在问题：
+
   - 新增属性、删除属性, 界面不会更新。
   - 直接通过下标修改数组, 界面不会自动更新。
 
@@ -166,7 +163,6 @@ npm run dev
   - 通过Reflect（反射）:  对源对象的属性进行操作。
   - MDN文档中描述的Proxy与Reflect：
     - [Proxy](https://developer.mozilla.org//docs/Web/JavaScript/Reference/Global_Objects/Proxy)
-
     - [Reflect](https://developer.mozilla.org//docs/Web/JavaScript/Reference/Global_Objects/Reflect)
 
       ```js
@@ -191,34 +187,34 @@ npm run dev
 ### 5.reactive对比ref
 
 - 从定义数据角度对比：
-  - ref用来定义：<strong style={{color:"#DD5145"}}>基本类型数据</strong>。
-  - reactive用来定义：<strong style={{color:"#DD5145"}}>对象（或数组）类型数据</strong>。
-  - 备注：ref也可以用来定义<strong style={{color:"#DD5145"}}>对象（或数组）类型数据</strong>, 它内部会自动通过```reactive```转为<strong style={{color:"#DD5145"}}>代理对象</strong>。
+  - ref用来定义：<strong style={{color:"#DD5145"}}>基本类型数据`</strong>`。
+  - reactive用来定义：<strong style={{color:"#DD5145"}}>对象（或数组）类型数据`</strong>`。
+  - 备注：ref也可以用来定义<strong style={{color:"#DD5145"}}>对象（或数组）类型数据`</strong>`, 它内部会自动通过 ``reactive``转为<strong style={{color:"#DD5145"}}>代理对象`</strong>`。
 - 从原理角度对比：
-  - ref通过``Object.defineProperty()``的```get```与```set```来实现响应式（数据劫持）。
-  - reactive通过使用<strong style={{color:"#DD5145"}}>Proxy</strong>来实现响应式（数据劫持）, 并通过<strong style={{color:"#DD5145"}}>Reflect</strong>操作<strong style={{color:"orange"}}>源对象</strong>内部的数据。
+  - ref通过 ``Object.defineProperty()``的 ``get``与 ``set``来实现响应式（数据劫持）。
+  - reactive通过使用<strong style={{color:"#DD5145"}}>Proxy`</strong>`来实现响应式（数据劫持）, 并通过<strong style={{color:"#DD5145"}}>Reflect`</strong>`操作<strong style={{color:"orange"}}>源对象`</strong>`内部的数据。
 - 从使用角度对比：
-  - ref定义的数据：操作数据<strong style={{color:"#DD5145"}}>需要</strong>```.value```，读取数据时模板中直接读取<strong style={{color:"#DD5145"}}>不需要</strong>```.value```。
-  - reactive定义的数据：操作数据与读取数据：<strong style={{color:"#DD5145"}}>均不需要</strong>```.value```。
+  - ref定义的数据：操作数据<strong style={{color:"#DD5145"}}>需要`</strong>```.value``，读取数据时模板中直接读取<strong style={{color:"#DD5145"}}>不需要`</strong>```.value``。
+  - reactive定义的数据：操作数据与读取数据：<strong style={{color:"#DD5145"}}>均不需要`</strong>```.value``。
 
 ### 6.setup的两个注意点
 
 - setup执行的时机
-  - 在beforeCreate之前执行一次，this是undefined。
 
+  - 在beforeCreate之前执行一次，this是undefined。
 - setup的参数
+
   - props：值为对象，包含：组件外部传递过来，且组件内部声明接收了的属性。
   - context：上下文对象
-    - attrs: 值为对象，包含：组件外部传递过来，但没有在props配置中声明的属性, 相当于 ```this.$attrs```。
-    - slots: 收到的插槽内容, 相当于 ```this.$slots```。
-    - emit: 分发自定义事件的函数, 相当于 ```this.$emit```。
+    - attrs: 值为对象，包含：组件外部传递过来，但没有在props配置中声明的属性, 相当于 ``this.$attrs``。
+    - slots: 收到的插槽内容, 相当于 ``this.$slots``。
+    - emit: 分发自定义事件的函数, 相当于 ``this.$emit``。
 
 ### 7.计算属性与监视
 
 #### 1.computed函数
 
 - 与Vue2.x中computed配置功能一致
-
 - 写法
 
   ```js
@@ -247,7 +243,6 @@ npm run dev
 #### 2.watch函数
 
 - 与Vue2.x中watch配置功能一致
-
 - 两个小“坑”：
 
   - 监视reactive定义的响应式数据时：oldValue无法正确获取、强制开启了深度监视（deep配置失效）。
@@ -291,9 +286,7 @@ npm run dev
 #### 3.watchEffect函数
 
 - watch的套路是：既要指明监视的属性，也要指明监视的回调。
-
 - watchEffect的套路是：不用指明监视哪个属性，监视的回调中用到哪个属性，那就监视哪个属性。
-
 - watchEffect有点像computed：
 
   - 但computed注重的计算出来的值（回调函数的返回值），所以必须要写返回值。
@@ -318,12 +311,10 @@ npm run dev
 
 ![](https://v3.cn.vuejs.org/images/lifecycle.svg)
 
-
 - Vue3.0中可以继续使用Vue2.x中的生命周期钩子，但有有两个被更名：
 
-  - ```beforeDestroy```改名为 ```beforeUnmount```
-  - ```destroyed```改名为 ```unmounted```
-
+  - ``beforeDestroy``改名为 ``beforeUnmount``
+  - ``destroyed``改名为 ``unmounted``
 - Vue3.0也提供了 Composition API 形式的生命周期钩子，与Vue2.x中钩子对应关系如下：
 
   - `beforeCreate`===>`setup()`
@@ -338,18 +329,15 @@ npm run dev
 ### 9.自定义hook函数
 
 - 什么是hook？—— 本质是一个函数，把setup函数中使用的Composition API进行了封装。
-
 - 类似于vue2.x中的mixin。
-
 - 自定义hook的优势: 复用代码, 让setup中的逻辑更清楚易懂。
 
 ### 10.toRef
 
 - 作用：创建一个 ref 对象，其value值指向另一个对象中的某个属性。
-- 语法：```const name = toRef(person,'name')```
+- 语法：``const name = toRef(person,'name')``
 - 应用:   要将响应式对象中的某个属性单独提供给外部使用时。
-
-- 扩展：```toRefs``` 与```toRef```功能一致，但可以批量创建多个 ref 对象，语法：```toRefs(person)```
+- 扩展：``toRefs`` 与 ``toRef``功能一致，但可以批量创建多个 ref 对象，语法：``toRefs(person)``
 
 ## 三、其它 Composition API
 
@@ -357,8 +345,8 @@ npm run dev
 
 - shallowReactive：只处理对象最外层属性的响应式（浅响应式）。
 - shallowRef：只处理基本数据类型的响应式, 不进行对象的响应式处理。
-
 - 什么时候使用?
+
   - 如果有一个对象数据，结构比较深, 但变化时只是外层属性变化 ===> shallowReactive。
   - 如果有一个对象数据，后续功能不会修改该对象中的属性，而是生新的对象来替换 ===> shallowRef。
 
@@ -371,7 +359,7 @@ npm run dev
 ### 3.toRaw 与 markRaw
 
 - toRaw：
-  - 作用：将一个由```reactive```生成的<strong style={{color:"orange"}}>响应式对象</strong>转为<strong style={{color:"orange"}}>普通对象</strong>。
+  - 作用：将一个由 ``reactive``生成的<strong style={{color:"orange"}}>响应式对象`</strong>`转为<strong style={{color:"orange"}}>普通对象`</strong>`。
   - 使用场景：用于读取响应式对象对应的普通对象，对这个普通对象的所有操作，不会引起页面更新。
 - markRaw：
   - 作用：标记一个对象，使其永远不会再成为响应式对象。
@@ -382,7 +370,6 @@ npm run dev
 ### 4.customRef
 
 - 作用：创建一个自定义的 ref，并对其依赖项跟踪和更新触发进行显式控制。
-
 - 实现防抖效果：
 
   ```vue
@@ -431,9 +418,7 @@ npm run dev
 <img src="https://v3.cn.vuejs.org/images/components_provide.png" style={{width:"300px"}} />
 
 - 作用：实现**祖与后代组件间**通信
-
 - 套路：父组件有一个 `provide` 选项来提供数据，后代组件有一个 `inject` 选项来开始使用这些数据
-
 - 具体写法：
 
   1. 祖组件中：
@@ -446,7 +431,6 @@ npm run dev
          ......
      }
      ```
-
   2. 后代组件中：
 
      ```js
@@ -471,12 +455,10 @@ npm run dev
 
 使用传统OptionsAPI中，新增或者修改一个需求，就需要分别在data，methods，computed里修改 。
 
-
 <div style={{width:'100%',height:"370px",overflow:"hidden",float:"left"}}>
     <img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f84e4e2c02424d9a99862ade0a2e4114~tplv-k3u1fbpfcp-watermark.image" style={{width:"600px",float:"left"}} />
     <img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/e5ac7e20d1784887a826f6360768a368~tplv-k3u1fbpfcp-watermark.image" style={{zoom:"50%",width:"560px",float:"left"}} />
 </div>
-
 
 ### 2.Composition API 的优势
 
@@ -490,7 +472,6 @@ npm run dev
     <img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6cc55165c0e34069a75fe36f8712eb80~tplv-k3u1fbpfcp-watermark.image" style={{height:"360px"}}/>
 </div>
 
-
 ## 五、新的组件
 
 ### 1.Fragment
@@ -501,7 +482,7 @@ npm run dev
 
 ### 2.Teleport
 
-- 什么是Teleport？—— `Teleport` 是一种能够将我们的<strong style={{color:"#DD5145"}}>组件html结构</strong>移动到指定位置的技术。
+- 什么是Teleport？—— `Teleport` 是一种能够将我们的<strong style={{color:"#DD5145"}}>组件html结构`</strong>`移动到指定位置的技术。
 
   ```vue
   <teleport to="移动位置">
@@ -517,7 +498,6 @@ npm run dev
 ### 3.Suspense
 
 - 等待异步组件时渲染一些额外内容，让应用有更好的用户体验
-
 - 使用步骤：
 
   - 异步引入组件
@@ -526,8 +506,7 @@ npm run dev
     import {defineAsyncComponent} from 'vue'
     const Child = defineAsyncComponent(()=>import('./components/Child.vue'))
     ```
-
-  - 使用```Suspense```包裹组件，并配置好```default``` 与 ```fallback```
+  - 使用 ``Suspense``包裹组件，并配置好 ``default`` 与 ``fallback``
 
     ```vue
     <template>
@@ -550,6 +529,7 @@ npm run dev
 ### 1.全局API的转移
 
 - Vue 2.x 有许多全局 API 和配置。
+
   - 例如：注册全局组件、注册全局指令等。
 
     ```js
@@ -566,25 +546,22 @@ npm run dev
       inserted: el => el.focus()
     }
     ```
-
 - Vue3.0中对这些API做出了调整：
 
-  - 将全局的API，即：```Vue.xxx```调整到应用实例（```app```）上
-
-    | 2.x 全局 API（```Vue```） | 3.x 实例 API (`app`)                        |
-    | ------------------------- | ------------------------------------------- |
-    | Vue.config.xxxx           | app.config.xxxx                             |
-    | Vue.config.productionTip  | <strong style={{color:"#DD5145"}}>移除</strong> |
-    | Vue.component             | app.component                               |
-    | Vue.directive             | app.directive                               |
-    | Vue.mixin                 | app.mixin                                   |
-    | Vue.use                   | app.use                                     |
-    | Vue.prototype             | app.config.globalProperties                 |
+  - 将全局的API，即：``Vue.xxx``调整到应用实例（``app``）上
+    | 2.x 全局 API（``Vue``）  | 3.x 实例 API (`app`)                              |
+    | ------------------------ | --------------------------------------------------- |
+    | Vue.config.xxxx          | app.config.xxxx                                     |
+    | Vue.config.productionTip | <strong style={{color:"#DD5145"}}>移除`</strong>` |
+    | Vue.component            | app.component                                       |
+    | Vue.directive            | app.directive                                       |
+    | Vue.mixin                | app.mixin                                           |
+    | Vue.use                  | app.use                                             |
+    | Vue.prototype            | app.config.globalProperties                         |
 
 ### 2.其他改变
 
 - data选项应始终被声明为一个函数。
-
 - 过度类名的更改：
 
   - Vue2.x写法
@@ -599,7 +576,6 @@ npm run dev
       opacity: 1;
     }
     ```
-
   - Vue3.x写法
 
     ```css
@@ -613,10 +589,8 @@ npm run dev
       opacity: 1;
     }
     ```
-
-- <strong style={{color:"#DD5145"}}>移除</strong>keyCode作为 v-on 的修饰符，同时也不再支持```config.keyCodes```
-
-- <strong style={{color:"#DD5145"}}>移除</strong>```v-on.native```修饰符
+- <strong style={{color:"#DD5145"}}>移除`</strong>`keyCode作为 v-on 的修饰符，同时也不再支持 ``config.keyCodes``
+- <strong style={{color:"#DD5145"}}>移除`</strong>```v-on.native``修饰符
 
   - 父组件中绑定事件
 
@@ -626,7 +600,6 @@ npm run dev
       v-on:click="handleNativeClickEvent"
     />
     ```
-
   - 子组件中声明自定义事件
 
     ```vue
@@ -636,9 +609,8 @@ npm run dev
       }
     </script>
     ```
-
-- <strong style={{color:"#DD5145"}}>移除</strong>过滤器（filter）
+- <strong style={{color:"#DD5145"}}>移除`</strong>`过滤器（filter）
 
   > 过滤器虽然这看起来很方便，但它需要一个自定义语法，打破大括号内表达式是 “只是 JavaScript” 的假设，这不仅有学习成本，而且有实现成本！建议用方法调用或计算属性去替换过滤器。
-
+  >
 - ......
