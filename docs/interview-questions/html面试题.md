@@ -1,8 +1,7 @@
 ---
 sidebar_position: 1
 ---
-
-# HTML面试题
+# HTML面试题2
 
 ## 001 - src和href的区别
 
@@ -15,7 +14,7 @@ sidebar_position: 1
 
 `href` 是 `Hypertext Reference`
 的缩写，指向网络资源所在位置，建立和当前元素（锚点）或当前文档（链接）之间的链接，如果在文档中添加，那么浏览器会识别该文档为 `css`
-文件，就会并行下载资源并且不会停止对当前文档的处理。 这也是为什么建议使用 `link` 方式来加载 `css`，而不是使用`@import` 方式。
+文件，就会并行下载资源并且不会停止对当前文档的处理。 这也是为什么建议使用 `link` 方式来加载 `css`，而不是使用 `@import` 方式。
 
 ## 002 - 对HTML语义化的理解
 
@@ -24,7 +23,6 @@ sidebar_position: 1
 语义化的优点：
 
 - 对机器友好，带有语义的文字表现力丰富，更适合搜索引擎的爬虫爬取有效信息，有利于SEO。除此之外，语义类还支持读屏软件，根据文章可以自动生成目录。
-
 - 对开发者友好，使用语义类标签增强了可读性，结构更加清晰，开发者能清晰的看出网页的结构，便于团队的开发与维护。
 
 ## 003 - DOCTYPE(⽂档类型) 的作用
@@ -33,7 +31,7 @@ sidebar_position: 1
 
 在 **HTML5** 中，`DOCTYPE` 唯一的作用是启用标准模式。
 
-浏览器渲染页面的两种模式（可通过`document.compatMode`获取）。
+浏览器渲染页面的两种模式（可通过 `document.compatMode`获取）。
 
 在很久以前的网络上，页面通常有两种版本：为**网景（Netscape）的Navigator** 准备的版本，以及为**微软（Microsoft）的 Internet
 Explorer** 准备的版本。当 W3C
@@ -46,7 +44,6 @@ Internet Explorer 5 的非标准行为。为了支持在网络标准被广泛采
 HTML 与 CSS 的规范描述的行为。在接近标准模式下，只有少数的怪异行为被实现。
 
 - `CSS1Compat`：标准模式（Standards mode），默认模式，浏览器使用W3C的标准解析渲染页面。在标准模式中，浏览器以其支持的最高标准呈现页面。
-
 - `BackCompat`：怪异模式(混杂模式)(Quirks mode)，浏览器使用自己的怪异模式解析渲染页面。在怪异模式中，页面以一种比较宽松的向后兼容的方式显示。
 
 ## 004 - defer和async的区别
@@ -69,7 +66,6 @@ JavaScript 加载于欲操作的 HTML 元素之前，则代码将出错。
 **脚本调用策略小结：**
 
 - 如果脚本无需等待页面解析，且无依赖独立运行，那么应使用 `async`。
-
 - 如果脚本需要等待页面解析，且依赖于其它脚本，调用这些脚本时应使用 `defer`，将关联的脚本按所需顺序置于 HTML 中。
 
 ![deferAndAsync](./img/deferAndAsync.png)
@@ -79,7 +75,6 @@ JavaScript 加载于欲操作的 HTML 元素之前，则代码将出错。
 使用 `defer` 和 `async` 都会使得解析HTML的同时进行js脚本的异步下载，不会阻碍文档的解析，区别是
 
 - `async` 在下载完js脚本之后立即执行js，有可能会阻碍文档的解析，且多个标记 `async` 的js脚本可能不会按照顺序执行。
-
 - 使用 `defer` 会在html解析完成之后再执行js脚本文件，而且多个 `defer` 的脚本会按照顺序执行。
 
 其中蓝色代表js脚本网络加载时间，红色代表js脚本执行时间，绿色代表html解析。
@@ -91,56 +86,60 @@ JavaScript 加载于欲操作的 HTML 元素之前，则代码将出错。
 **`meta` 元素定义的元数据的类型包括以下几种：**
 
 - 如果设置了 `name` 属性，`meta` 元素提供的是文档级别（document-level）的元数据，应用于整个页面。
-
 - 如果设置了 `http-equiv` 属性，`meta` 元素则是编译指令，提供的信息与类似命名的 HTTP 头部相同。
-
 - 如果设置了 `charset` 属性，`meta` 元素是一个字符集声明，告诉文档使用哪种字符编码。
-
 - 如果设置了 `itemprop` 属性，`meta` 元素提供用户定义的元数据。
 
 **常用的meta标签：**
 
 1. `charset`，用来描述HTML文档的编码类型。
-    ```html
-    <meta charset="UTF-8">
-    ```
+
+   ```html
+   <meta charset="UTF-8">
+   ```
 2. `keywords`，页面关键词。
-    ```html
-    <meta name="keywords" content="关键词" />
-    ```
+
+   ```html
+   <meta name="keywords" content="关键词" />
+   ```
 3. `description`，页面描述。
-    ```html
-    <meta name="description" content="页面描述内容" />
-    ```
+
+   ```html
+   <meta name="description" content="页面描述内容" />
+   ```
 4. `refresh`，页面重定向和刷新。
-    ```html
-    <meta http-equiv="refresh" content="0;url=" />
-    ```
+
+   ```html
+   <meta http-equiv="refresh" content="0;url=" />
+   ```
 5. `viewport`，适配移动端，可以控制视口的大小和比例。
-    ```html
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    ```
+
+   ```html
+   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+   ```
+
    其中，`content` 参数有以下几种：
 
-    - `width` viewport ：宽度(数值/device-width)
-    - `height` viewport ：高度(数值/device-height)
-    - `initial-scale` ：初始缩放比例
-    - `maximum-scale` ：最大缩放比例
-    - `minimum-scale` ：最小缩放比例
-    - `user-scalable` ：是否允许用户缩放(yes/no）
-
+   - `width` viewport ：宽度(数值/device-width)
+   - `height` viewport ：高度(数值/device-height)
+   - `initial-scale` ：初始缩放比例
+   - `maximum-scale` ：最大缩放比例
+   - `minimum-scale` ：最小缩放比例
+   - `user-scalable` ：是否允许用户缩放(yes/no）
 6. 搜索引擎索引方式。
-    ```html
-    <meta name="robots" content="index,follow" />
-    ```
+
+   ```html
+   <meta name="robots" content="index,follow" />
+   ```
+
    其中，`content` 参数有以下几种：
 
-    - `all`：文件将被检索，且页面上的链接可以被查询；
-    - `none`：文件将不被检索，且页面上的链接不可以被查询；
-    - `index`：文件将被检索；
-    - `follow`：页面上的链接可以被查询；
-    - `noindex`：文件将不被检索；
-    - `nofollow`：页面上的链接不可以被查询。
+   - `all`：文件将被检索，且页面上的链接可以被查询；
+   - `none`：文件将不被检索，且页面上的链接不可以被查询；
+   - `index`：文件将被检索；
+   - `follow`：页面上的链接可以被查询；
+   - `noindex`：文件将不被检索；
+   - `nofollow`：页面上的链接不可以被查询。
 
 ## 006 - HTML5有哪些更新
 
@@ -248,23 +247,22 @@ JavaScript 加载于欲操作的 HTML 元素之前，则代码将出错。
 - **拖放**：`<img draggable="true"/>` 如果该属性没有设值，则默认值 为 auto ，表示使用浏览器定义的默认行为。
   默认情况下，只有已选中的文本、图片、链接可以拖动。对其它的元素来说，必须按拖动机制的顺序设置
   ondragstart 事件才能正常工作
-
-- **`Canvas`**：Canvas API 提供了一个通过JavaScript 和 HTML的`<canvas>`元素来绘制图形的方式。它可以用于动画、游戏画面、数据可视化、图片编辑以及实时视频处理等方面。
+- **`Canvas`**：Canvas API 提供了一个通过JavaScript 和 HTML的 `<canvas>`元素来绘制图形的方式。它可以用于动画、游戏画面、数据可视化、图片编辑以及实时视频处理等方面。
   `canvas` 元素使用 `JavaScript`
   在网页上绘制图像。画布是一个矩形区域，可以控制其每一像素。canvas拥有多种绘制路径、矩形、圆形、字符以及添加图像的方法。
 
-    ```html
-    <canvas id="myCanvas" width="200" height="100" style="background:#bfa"></canvas>
-    ```
-  <canvas id="myCanvas" width="200" height="100" style={{background:"#bfa"}}></canvas>
+  ```html
+  <canvas id="myCanvas" width="200" height="100" style="background:#bfa"></canvas>
+  ```
 
+  <canvas id="myCanvas" width="200" height="100" style={{background:"#bfa"}}></canvas>
 - **可缩放矢量图形（Scalable Vector Graphics，SVG）**：是一种用于描述二维的矢量图形，基于 XML
   的标记语言。作为一个基于文本的开放网络标准，SVG能够优雅而简洁地渲染不同大小的图形，并和CSS，DOM，JavaScript和SMIL等其他网络标准无缝衔接。本质上，SVG
   相对于图像，就好比 HTML 相对于文本。
 - 地理定位：`Geolocation` 接口是一个用来获取设备地理位置的可编程的对象，它可以让Web内容访问到设备的地理位置，这将允许Web应用基于用户的地理位置提供定制的信息。说实话：其实Geolocation
   就是用来获取到当前设备的经纬度（位置）
 
-  带有此接口的对象可以用由 `Navigator` 实现的属性`NavigatorGeolocation.geolocation` 来获得。
+  带有此接口的对象可以用由 `Navigator` 实现的属性 `NavigatorGeolocation.geolocation` 来获得。
 
 ## 007 - 块元素、行内元素、空元素
 
@@ -341,7 +339,7 @@ JavaScript 加载于欲操作的 HTML 元素之前，则代码将出错。
 
 ## 008 - title与h1的区别、b与strong的区别、i与em的区别
 
-`strong` 标签有语义，是起到加重语气的效果，而`b`标签是没有的，`b`
+`strong` 标签有语义，是起到加重语气的效果，而 `b`标签是没有的，`b`
 标签只是一个简单加粗标签。b标签之间的字符都设为粗体，`strong`
 标签加强字符的语气都是通过粗体来实现的，而搜索引擎更侧重 `strong` 标签。
 
@@ -367,16 +365,14 @@ Worker 比较耗费资源，不应该过度使用，而且一旦使用完毕，�
 如何创建 web worker：
 
 1. 检测浏览器对于 web worker 的支持性
-
 2. 创建 web worker 文件（js，回传函数等）
-
 3. 创建 web worker 对象
 
 ## 010 - head 标签有什么作用，其中什么标签必不可少
 
 **HTML head** 元素 规定文档相关的配置信息（元数据），包括文档的标题，引用的文档样式和脚本等。
 
-在页面加载完成的时候，标签 `head` 里的内容，是不会在页面中显示出来的。它包含了像页面的`<title>`(标题) ,`CSS`(如果你选择用
+在页面加载完成的时候，标签 `head` 里的内容，是不会在页面中显示出来的。它包含了像页面的 `<title>`(标题) ,`CSS`(如果你选择用
 CSS 来为 HTML 内容添加样式)，指向自定义图标的链接和其他的元数据(
 描述HTML的数据，比如，作者，和描述文档的重要关键词)。
 
@@ -397,7 +393,7 @@ Web
 #### SVG
 
 **可缩放矢量图形（Scalable Vector Graphics，SVG）**，是一种用于描述二维的矢量图形，基于 `XML`
-的标记语言。作为一个基于文本的开放网络标准，SVG能够优雅而简洁地渲染不同大小的图形，并和`CSS`，`DOM`，`JavaScript`和`SMIL`
+的标记语言。作为一个基于文本的开放网络标准，SVG能够优雅而简洁地渲染不同大小的图形，并和 `CSS`，`DOM`，`JavaScript`和 `SMIL`
 等其他网络标准无缝衔接。本质上，SVG 相对于图像，就好比 HTML 相对于文本。
 
 SVG 图像及其相关行为被定义于 XML 文本文件之中，这意味着可以对它们进行搜索、索引、编写脚本以及压缩。此外，这也意味着可以使用任何文本编辑器和绘图软件来创建和编辑它们。
@@ -447,9 +443,10 @@ Canvas是画布，通过Javascript来绘制2D图形，是逐像素进行渲染�
 
 1. 指向图像的 URL。
 2. 可选地，再加一个空格之后，附加以下的其一：
-    - 一个宽度描述符，这是一个正整数，后面紧跟 'w' 符号。该整数宽度除以 `sizes` 属性给出的资源（source）大小来计算得到有效的像素密度，即换算成和
-      x 描述符等价的值。
-    - 一个像素密度描述符，这是一个正浮点数，后面紧跟 'x' 符号。
+
+   - 一个宽度描述符，这是一个正整数，后面紧跟 'w' 符号。该整数宽度除以 `sizes` 属性给出的资源（source）大小来计算得到有效的像素密度，即换算成和
+     x 描述符等价的值。
+   - 一个像素密度描述符，这是一个正浮点数，后面紧跟 'x' 符号。
 
    如果没有指定源描述符，那它会被指定为默认的 1x。
 
@@ -503,7 +500,7 @@ iframe作用：iframe 元素会创建包含另外一个文档的内联框架（�
 
 ## 015 - `label`的作用是什么？如何使用？
 
-**作用**：`label`标签来定义表单控件的关系：当用户选择`label`标签时，浏览器会自动将焦点转到和`label`标签相关的表单控件上。
+**作用**：`label`标签来定义表单控件的关系：当用户选择 `label`标签时，浏览器会自动将焦点转到和 `label`标签相关的表单控件上。
 
 **使用方法**：`<label for="mobile">Number:</label>`
 `<input type="text" id="mobile"/>`
@@ -527,19 +524,19 @@ iframe作用：iframe 元素会创建包含另外一个文档的内联框架（�
   CACHE MANIFEST
 
        #v0.11
-       
+     
        CACHE:
-       
+     
        js/app.js
-       
+     
        css/style.css
-       
+     
        NETWORK:
-       
+     
        resourse/logo.png
-       
+     
        FALLBACK:
-       
+     
        / /offline.html
 ```
 
@@ -585,7 +582,7 @@ offline.html 。
 
 离线情况下：加载离线资源
 
-## 018 - 文档声明（Doctype）和`<!Doctype html>`有何作用? 严格模式与混杂模式如何区分？它们有何意义?
+## 018 - 文档声明（Doctype）和 `<!Doctype html>`有何作用? 严格模式与混杂模式如何区分？它们有何意义?
 
 严格模式与混杂模式的区分：
 
@@ -598,14 +595,11 @@ offline.html 。
 - 包含过渡 DTD 和 URI 的 DOCTYPE ，也以严格模式呈现，但有过渡 DTD 而没有 URI （统一资源标识符，就是声明最后的地址）会导致页面以混杂模式呈现（有
   URI 的过渡 DTD ——严格模式；没有 URI 的过渡
   DTD ——混杂模式）；
-
 - DOCTYPE 不存在或形式不正确会导致文档以混杂模式呈现（DTD不存在或者格式不正确——混杂模式）；
 - HTML5 没有 DTD ，因此也就没有严格模式与混杂模式的区别，HTML5 有相对宽松的 法，实现时，已经尽可能大的实现了向后兼容(HTML5
   没有严格和混杂之分)。
   总之，严格模式让各个浏览器统一执行一套规范兼容模式保证了旧网站的正常运行。
-
 - 文档声明的作用：文档声明是为了告诉浏览器，当前HTML文档使用什么版本的HTML来写的，这样浏览器才能按照声明的版本来正确的解析。
-
 - `<!Doctype html>`的作用：`<!doctype html>` 的作用就是让浏览器进入标准模式，使用最新的 HTML5
   标准来解析渲染页面；如果不写，浏览器就会进入混杂模式，我们需要避免此类情况发生。
 
