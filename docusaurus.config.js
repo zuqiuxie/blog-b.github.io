@@ -114,7 +114,7 @@ const config = {
                     {to: '/Tools-website2', label: '🧰成长网站', position: 'left'},
                     {to: '/blog', label: '📑Blog', position: 'left'},
                     {
-                        href: 'https://github.com/junjieweb/junjieweb.github.io',
+                        href: 'https://github.com/zuqiuxie/blog-b.github.io',
                         position: 'right',
                         className: 'header-github-link',
                         'aria-label': 'GitHub repository',
@@ -171,7 +171,7 @@ const config = {
                             },
                             {
                                 label: 'GitHub',
-                                href: 'https://github.com/junjieweb',
+                                href: 'https://github.com/zuqixuie',
                             },
                             {
                                 label: 'JetBrains Academy',
